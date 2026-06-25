@@ -34,7 +34,7 @@ const portalModules = [
     title: "Jamaah Super App",
     desc: "Panduan Ibadah & Itinerary (Modul 2)",
     icon: Smartphone,
-    href: "#",
+    href: "/jamaah-app",
     color: "from-amber-500 to-amber-600",
     shadow: "shadow-amber-500/20",
   },
