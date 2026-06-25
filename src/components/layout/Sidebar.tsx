@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 
 const menuItems = [
-  { name: "Dasbor", icon: LayoutDashboard, href: "/" },
+  { name: "Dasbor", icon: LayoutDashboard, href: "/dashboard" },
   { name: "Manajemen Paket", icon: Package, href: "/manajemen-paket" },
   { name: "Data Jamaah", icon: Users, href: "/data-jamaah" },
   { name: "Keuangan", icon: DollarSign, href: "/keuangan" },
