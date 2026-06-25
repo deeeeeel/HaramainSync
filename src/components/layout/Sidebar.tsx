@@ -28,7 +28,7 @@ export function Sidebar() {
 
   return (
     <aside className="w-64 bg-slate-900 text-slate-300 flex flex-col h-full shrink-0 shadow-xl z-20">
-      <div className="p-6 flex items-center gap-3">
+      <Link href="/" className="p-6 flex items-center gap-3 hover:opacity-80 transition-opacity">
         <div className="w-8 h-8 rounded-lg bg-yellow-400 flex items-center justify-center shrink-0">
           <Globe className="w-5 h-5 text-slate-900" />
         </div>
@@ -36,7 +36,7 @@ export function Sidebar() {
           Executive
           <span className="block text-yellow-400 text-sm font-normal">Command Center</span>
         </div>
-      </div>
+      </Link>
 
       <nav className="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
         {menuItems.map((item) => {

@@ -43,6 +43,9 @@ export default function JamaahLayout({ children }: { children: React.ReactNode }
         </div>
 
       </div>
+      <footer className="mt-8 text-center text-xs text-slate-500">
+        Digitalisasi Menyeluruh Travel Umroh & Haji &bull; <a href="https://studiosatuakun.id/" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-500 transition-colors font-medium">PT Studio Satu Akun</a>
+      </footer>
     </div>
   );
 }

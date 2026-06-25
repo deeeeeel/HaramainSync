@@ -88,7 +88,7 @@ export default function PortalPage() {
 
       <div className="mt-24 text-center relative z-10">
         <p className="text-xs text-slate-600">
-          Digitalisasi Menyeluruh Travel Umroh & Haji &bull; Executive Command Center
+          Digitalisasi Menyeluruh Travel Umroh & Haji &bull; <a href="https://studiosatuakun.id/" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-500 transition-colors">PT Studio Satu Akun</a>
         </p>
       </div>
     </div>

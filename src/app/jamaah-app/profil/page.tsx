@@ -1,4 +1,5 @@
 import { User, QrCode, CreditCard, ShieldCheck, LogOut, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 export default function ProfilPage() {
   return (
@@ -54,10 +55,10 @@ export default function ProfilPage() {
           </div>
         </div>
 
-        <button className="flex items-center justify-center gap-2 w-full bg-rose-50 text-rose-600 rounded-2xl py-4 font-bold shadow-sm active:bg-rose-100 transition-colors border border-rose-100">
+        <Link href="/" className="flex items-center justify-center gap-2 w-full bg-rose-50 text-rose-600 rounded-2xl py-4 font-bold shadow-sm active:bg-rose-100 transition-colors border border-rose-100">
           <LogOut className="w-5 h-5" />
           Keluar Aplikasi
-        </button>
+        </Link>
 
       </div>
     </div>
