@@ -15,7 +15,7 @@ export default function JamaahLayout({ children }: { children: React.ReactNode }
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4 font-sans">
+    <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-4 font-sans">
       {/* Mobile Device Mockup Container */}
       <div className="w-full max-w-[400px] h-[850px] bg-slate-50 rounded-[3rem] shadow-2xl border-[12px] border-slate-900 relative overflow-hidden flex flex-col">
         
