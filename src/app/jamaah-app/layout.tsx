@@ -15,12 +15,12 @@ export default function JamaahLayout({ children }: { children: React.ReactNode }
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center p-4 font-sans">
+    <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center md:p-4 font-sans">
       {/* Mobile Device Mockup Container */}
-      <div className="w-full max-w-[400px] h-[850px] bg-slate-50 rounded-[3rem] shadow-2xl border-[12px] border-slate-900 relative overflow-hidden flex flex-col">
+      <div className="w-full h-[100dvh] md:max-w-[400px] md:h-[850px] bg-slate-50 md:rounded-[3rem] shadow-2xl md:border-[12px] border-slate-900 relative overflow-hidden flex flex-col">
         
         {/* Dynamic Island / Notch Mockup */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-slate-900 rounded-b-3xl z-50"></div>
+        <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-slate-900 rounded-b-3xl z-50"></div>
 
         {/* Content Area */}
         <div className="flex-1 overflow-hidden flex flex-col relative w-full h-full">
@@ -43,7 +43,7 @@ export default function JamaahLayout({ children }: { children: React.ReactNode }
         </div>
 
       </div>
-      <footer className="mt-8 text-center text-xs text-slate-500">
+      <footer className="hidden md:block mt-8 text-center text-xs text-slate-500">
         Digitalisasi Menyeluruh Travel Umroh & Haji &bull; <a href="https://studiosatuakun.id/" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-500 transition-colors font-medium">PT Studio Satu Akun</a>
       </footer>
     </div>
