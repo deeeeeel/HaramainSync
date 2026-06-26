@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Portal Akses | Travel Umroh & Haji",
-  description: "Sistem Terintegrasi Digitalisasi Travel Umroh & Haji.",
+  title: "HaramainSync | Orkestrasi Manajemen Umroh & Haji",
+  description: "Orkestrasi Manajemen Umroh & Haji, Tersinkronisasi Real-Time.",
 };
 
 export default function RootLayout({

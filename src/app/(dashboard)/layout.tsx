@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Executive Command Center | Travel Umroh & Haji",
-  description: "Dashboard pemantauan intelijen secara real-time untuk travel Umroh & Haji.",
+  title: "Executive Command Center | HaramainSync",
+  description: "Orkestrasi Manajemen Umroh & Haji, Tersinkronisasi Real-Time.",
 };
 
 import { Sidebar } from "@/components/layout/Sidebar";

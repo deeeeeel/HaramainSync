@@ -61,10 +61,10 @@ export default function PortalPage() {
           <Map className="w-8 h-8 text-slate-900" />
         </div>
         <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
-          HajiUmroh <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-emerald-400">System</span>
+          Haramain<span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-emerald-400">Sync</span>
         </h1>
         <p className="text-slate-400 max-w-lg mx-auto text-sm md:text-base leading-relaxed">
-          Pilih modul portal akses (Role) untuk menggunakan sistem ekosistem travel yang terintegrasi secara Real-Time.
+          Orkestrasi Manajemen Umroh & Haji, Tersinkronisasi Real-Time.
         </p>
       </div>
 
