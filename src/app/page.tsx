@@ -59,11 +59,11 @@ export default function PortalPage() {
           src="/haramain.png" 
           alt="Haramain Background" 
           fill 
-          className="object-cover opacity-[0.25] contrast-125 saturate-50 mix-blend-screen"
+          className="object-cover opacity-40 contrast-125 saturate-50"
           priority
         />
         {/* Dark overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950/90"></div>
+        <div className="absolute inset-0 bg-slate-950/70"></div>
       </div>
 
       {/* Background gradients */}
