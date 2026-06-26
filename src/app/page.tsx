@@ -49,16 +49,31 @@ const portalModules = [
   },
 ];
 
+// Custom Kaaba SVG Component
+const KaabaIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <rect x="5" y="6" width="14" height="16" fill="currentColor" />
+    <line x1="5" y1="10" x2="19" y2="10" stroke="#facc15" strokeWidth="1.5" />
+    <rect x="10" y="15" width="4" height="7" fill="#facc15" />
+    <path d="M5 6L12 3L19 6" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+  </svg>
+);
+
 export default function PortalPage() {
   return (
     <div className="min-h-full flex flex-col items-center justify-center p-6 relative overflow-hidden bg-slate-950">
       {/* Background gradients */}
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-900/20 blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-emerald-900/20 blur-[120px] pointer-events-none"></div>
+      
+      {/* Giant Background Watermark */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.03] z-0 mix-blend-overlay">
+        <KaabaIcon className="w-[800px] h-[800px] text-white transform -rotate-12" />
+      </div>
 
       <div className="text-center mb-16 relative z-10">
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-400 to-yellow-500 mb-6 shadow-[0_0_30px_rgba(250,204,21,0.3)]">
-          <Map className="w-8 h-8 text-slate-900" />
+          <KaabaIcon className="w-8 h-8 text-slate-900" />
         </div>
         <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">
           Haramain<span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-emerald-400">Sync</span>
