@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #facc15;
-  --color-secondary: #0f172a;
+  --color-primary: #d4af37; /* Champagne Gold */
+  --color-secondary: #064e3b; /* Deep Emerald Green */
   
   --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
 }
 
 :root {
@@ -20,10 +21,10 @@ body {
 /* Custom Utilities for Premium Look */
 @layer utilities {
   .glass-panel {
-    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-sm;
+    @apply bg-white/70 backdrop-blur-md border border-white/40 shadow-sm;
   }
   
   .luxury-gradient {
-    @apply bg-gradient-to-br from-slate-900 to-slate-800 text-white;
+    @apply bg-gradient-to-br from-[#064e3b] to-[#022c22] text-white;
   }
 }

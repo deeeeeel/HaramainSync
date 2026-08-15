@@ -6,6 +6,7 @@ import {
   PlayCircle
 } from "lucide-react";
 import Link from "next/link";
+import { SOSDrawer } from "@/components/jamaah/SOSDrawer";
 
 export default function JamaahApp() {
   return (
@@ -127,6 +128,9 @@ export default function JamaahApp() {
           </div>
         </div>
       </div>
+
+      {/* SOS Feature */}
+      <SOSDrawer />
     </div>
   );
 }

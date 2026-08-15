@@ -30,13 +30,13 @@ const packages = [
 
 export function UpcomingPackagesTable() {
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+    <div className="bg-white rounded-xl shadow-sm border border-slate-200/60 overflow-hidden">
       <div className="p-6 border-b border-slate-100 flex justify-between items-center">
         <div>
-          <h2 className="text-lg font-bold text-slate-800">Status Kuota Paket Terdekat</h2>
+          <h2 className="text-lg font-bold text-slate-900 font-serif">Status Kuota Paket Terdekat</h2>
           <p className="text-sm text-slate-500">Pantauan sisa seat maskapai & kamar hotel</p>
         </div>
-        <button className="text-sm font-medium text-slate-900 bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded-lg transition-colors active:scale-95">
+        <button className="text-sm font-medium text-white bg-[#d4af37] hover:bg-[#c5a030] px-4 py-2 rounded-lg transition-colors shadow-sm active:scale-95">
           Lihat Semua
         </button>
       </div>
@@ -56,13 +56,13 @@ export function UpcomingPackagesTable() {
             {packages.map((pkg) => (
               <tr key={pkg.id} className="hover:bg-slate-50 transition-colors group">
                 <td className="p-4">
-                  <p className="font-semibold text-slate-800">{pkg.name}</p>
+                  <p className="font-semibold text-slate-900">{pkg.name}</p>
                   <p className="text-xs text-slate-500">{pkg.id}</p>
                 </td>
                 <td className="p-4 text-slate-600">{pkg.date}</td>
                 <td className="p-4 text-center">
                   <div className="inline-flex items-center justify-center">
-                    <span className="font-bold text-slate-800">{pkg.totalSeats - pkg.bookedSeats}</span>
+                    <span className="font-bold text-slate-900">{pkg.totalSeats - pkg.bookedSeats}</span>
                     <span className="text-slate-400 mx-1">/</span>
                     <span className="text-slate-500">{pkg.totalSeats}</span>
                   </div>

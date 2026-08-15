@@ -12,16 +12,16 @@ export default function ManajemenPaket() {
     <div className="max-w-7xl mx-auto space-y-6">
       <div className="flex justify-between items-center mb-8">
         <div>
-          <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Manajemen Paket</h1>
+          <h1 className="text-2xl font-bold text-slate-900 tracking-tight font-serif">Manajemen Paket</h1>
           <p className="text-slate-500 mt-1">Kelola ketersediaan paket, seat maskapai, dan kamar hotel.</p>
         </div>
-        <button className="flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-slate-900 px-4 py-2 rounded-lg font-medium transition-all active:scale-95 shadow-sm">
+        <button className="flex items-center gap-2 bg-[#d4af37] hover:bg-[#c5a030] text-white px-4 py-2 rounded-lg font-medium transition-all active:scale-95 shadow-sm">
           <Plus className="w-5 h-5" />
           Buat Paket Baru
         </button>
       </div>
 
-      <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+      <div className="bg-white rounded-xl shadow-sm border border-slate-200/60 overflow-hidden">
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="bg-slate-50 text-slate-500 text-xs uppercase tracking-wider border-b border-slate-100">
@@ -38,13 +38,13 @@ export default function ManajemenPaket() {
             {mockPackages.map((pkg) => (
               <tr key={pkg.id} className="hover:bg-slate-50 transition-colors">
                 <td className="p-4">
-                  <p className="font-semibold text-slate-800">{pkg.name}</p>
+                  <p className="font-semibold text-slate-900">{pkg.name}</p>
                   <p className="text-xs text-slate-500">{pkg.id} &bull; {pkg.duration}</p>
                 </td>
                 <td className="p-4 font-medium text-slate-700">{pkg.date}</td>
                 <td className="p-4 text-slate-600">{pkg.maskapai}</td>
                 <td className="p-4 text-center">
-                  <span className="font-semibold text-slate-800">{pkg.seat}</span>
+                  <span className="font-semibold text-slate-900">{pkg.seat}</span>
                   <span className="text-slate-400 mx-1">/</span>
                   <span className="text-slate-500">{pkg.maxSeat}</span>
                 </td>

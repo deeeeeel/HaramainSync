@@ -4,42 +4,43 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { 
   Command, 
-  Boxes, 
   Fingerprint, 
   Landmark, 
-  Radar, 
-  Earth, 
+  FolderKanban,
   LogOut,
-  Settings
+  Settings,
+  Earth
 } from "lucide-react";
 
 const menuItems = [
-  { name: "Dasbor", icon: Command, href: "/dashboard" },
-  { name: "Manajemen Paket", icon: Boxes, href: "/manajemen-paket" },
-  { name: "Data Jamaah", icon: Fingerprint, href: "/data-jamaah" },
-  { name: "Keuangan", icon: Landmark, href: "/keuangan" },
-  { name: "Live Tracking", icon: Radar, href: "/live-tracking" },
-  { name: "GEOINT Map", icon: Earth, href: "/geoint-map" },
+  { name: "Dasbor", icon: Command, href: "/agent" },
+  { name: "Jamaah Saya", icon: Fingerprint, href: "/agent/jamaah" },
+  { name: "Pencairan Komisi", icon: Landmark, href: "/agent/komisi" },
+  { name: "Marketing Kit", icon: FolderKanban, href: "/agent/marketing" },
 ];
 
-export function Sidebar() {
+export function AgentSidebar() {
   const pathname = usePathname();
 
   return (
     <aside className="w-64 bg-[#022c22] text-emerald-100/70 flex flex-col h-full shrink-0 shadow-xl z-20 border-r border-[#d4af37]/10">
-      <Link href="/" className="p-6 flex items-center gap-3 hover:opacity-80 transition-opacity">
+      <Link href="/agent" className="p-6 flex items-center gap-3 hover:opacity-80 transition-opacity">
         <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#d4af37] to-yellow-600 flex items-center justify-center shrink-0">
           <Earth className="w-5 h-5 text-white" />
         </div>
         <div className="font-bold text-white text-lg leading-tight font-serif">
-          Executive
-          <span className="block text-[#d4af37] text-sm font-sans font-normal tracking-wide">Command Center</span>
+          HaramainSync
+          <span className="block text-[#d4af37] text-sm font-sans font-normal tracking-wide">Agent Portal</span>
         </div>
       </Link>
 
       <nav className="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
         {menuItems.map((item) => {
-          const isActive = pathname === item.href;
+          // Exact match for /agent, partial match for sub-routes
+          const isActive = item.href === "/agent" 
+            ? pathname === "/agent" 
+            : pathname.startsWith(item.href);
+
           return (
             <Link
               key={item.name}

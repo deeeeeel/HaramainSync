@@ -13,7 +13,7 @@ export default function DataJamaah() {
     <div className="max-w-7xl mx-auto space-y-6">
       <div className="flex justify-between items-center mb-8">
         <div>
-          <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Data Jamaah</h1>
+          <h1 className="text-2xl font-bold text-slate-900 tracking-tight font-serif">Data Jamaah</h1>
           <p className="text-slate-500 mt-1">Database seluruh jamaah aktif, status pembayaran, dan visa.</p>
         </div>
         <div className="flex items-center gap-3">
@@ -21,15 +21,15 @@ export default function DataJamaah() {
             <Filter className="w-4 h-4" />
             Filter
           </button>
-          <button className="flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-slate-900 px-4 py-2 rounded-lg font-medium transition-all active:scale-95 shadow-sm">
+          <button className="flex items-center gap-2 bg-[#d4af37] hover:bg-[#c5a030] text-white px-4 py-2 rounded-lg font-medium transition-all active:scale-95 shadow-sm">
             Export Data
           </button>
         </div>
       </div>
 
-      <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+      <div className="bg-white rounded-xl shadow-sm border border-slate-200/60 overflow-hidden">
         <div className="p-4 border-b border-slate-100 flex items-center justify-between">
-          <div className="flex items-center bg-slate-50 rounded-lg px-4 py-2 w-full max-w-md focus-within:ring-2 ring-yellow-400/50 transition-all border border-slate-200">
+          <div className="flex items-center bg-slate-50 rounded-lg px-4 py-2 w-full max-w-md focus-within:ring-2 ring-emerald-500/20 transition-all border border-slate-200">
             <Search className="w-4 h-4 text-slate-400 mr-2" />
             <input 
               type="text" 
@@ -58,7 +58,7 @@ export default function DataJamaah() {
             {mockJamaah.map((jam) => (
               <tr key={jam.id} className="hover:bg-slate-50 transition-colors">
                 <td className="p-4">
-                  <p className="font-bold text-slate-800">{jam.name}</p>
+                  <p className="font-bold text-slate-900">{jam.name}</p>
                   <p className="text-xs text-slate-500">NIK: {jam.nik} &bull; {jam.id}</p>
                 </td>
                 <td className="p-4 font-medium text-slate-700">{jam.package}</td>

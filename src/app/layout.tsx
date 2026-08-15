@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-inter", // Keep variable name so we don't have to change globals.css
+  subsets: ["latin"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
 });
 
@@ -18,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`${inter.variable} h-full antialiased`}>
-      <body className="h-full font-sans text-slate-100 bg-slate-950">
+    <html lang="id" className={`${jakarta.variable} ${playfair.variable} h-full antialiased`}>
+      <body className="h-full font-sans text-slate-800 bg-slate-50 selection:bg-emerald-500/30">
         {children}
       </body>
     </html>

@@ -13,10 +13,10 @@ export default function Keuangan() {
     <div className="max-w-7xl mx-auto space-y-6">
       <div className="flex justify-between items-center mb-8">
         <div>
-          <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Dasbor Keuangan</h1>
+          <h1 className="text-2xl font-bold text-slate-900 tracking-tight font-serif">Dasbor Keuangan</h1>
           <p className="text-slate-500 mt-1">Pantau arus kas, invoice masuk, dan pembayaran mutawwif.</p>
         </div>
-        <button className="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-lg font-medium transition-all active:scale-95 shadow-sm">
+        <button className="flex items-center gap-2 bg-[#064e3b] hover:bg-[#022c22] text-white px-4 py-2 rounded-lg font-medium transition-all active:scale-95 shadow-sm">
           <Download className="w-4 h-4" />
           Unduh Laporan (PDF)
         </button>
@@ -43,9 +43,9 @@ export default function Keuangan() {
         </div>
       </div>
 
-      <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden mt-8">
+      <div className="bg-white rounded-xl shadow-sm border border-slate-200/60 overflow-hidden mt-8">
         <div className="p-5 border-b border-slate-100 bg-slate-50/50">
-          <h3 className="text-lg font-bold text-slate-800">Transaksi Terbaru</h3>
+          <h3 className="text-lg font-bold text-slate-900 font-serif">Transaksi Terbaru</h3>
         </div>
         <div className="divide-y divide-slate-100">
           {recentTransactions.map((trx) => (
@@ -57,7 +57,7 @@ export default function Keuangan() {
                   {trx.type === 'in' ? <ArrowDownRight className="w-5 h-5" /> : <ArrowUpRight className="w-5 h-5" />}
                 </div>
                 <div>
-                  <p className="font-bold text-slate-800">{trx.desc}</p>
+                  <p className="font-bold text-slate-900">{trx.desc}</p>
                   <p className="text-xs text-slate-500">{trx.name} &bull; {trx.date} &bull; {trx.id}</p>
                 </div>
               </div>
